@@ -1,0 +1,41 @@
+{
+    "name": "luatester",
+    "displayName": "LuaTester",
+    "description": "Send code to lua tester",
+    "version": "0.0.1",
+    "publisher": "cmourglia",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.Send",
+        "onCommand:extension.SendSelection"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+			{
+				"command": "extension.Send",
+				"title": "Send to LuaTester"
+			},
+			{
+				"command": "extension.SendSelection",
+				"title": "Send selection to LuaTester"
+			}
+		]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
